@@ -9,86 +9,87 @@
 </head>
 <body>
 
+  <!-- Barra superior -->
   <header class="topbar">
     <div class="topbar-brand"><i class="bi bi-bag-fill"></i> StyleShop</div>
-    <nav class="topbar-nav">
-      <a href="dashboard.html"><i class="bi bi-house-door"></i> Inicio</a>
-      <a href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
-      <a href="ventas.html" class="active"><i class="bi bi-receipt"></i> Ventas</a>
-      <a href="categorias.html"><i class="bi bi-tags"></i> Categorías</a>
-      <a href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
-    </nav>
-    <a href="login.html" class="btn-logout"><i class="bi bi-box-arrow-right"></i> Salir</a>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-actions">
+      <i class="bi bi-bell"></i>
+      <i class="bi bi-gear"></i>
+      <div class="topbar-avatar">AD</div>
+    </div>
   </header>
+
+  <!-- Barra de navegación -->
+  <nav class="subnav">
+    <div class="subnav-inner">
+    <a href="dashboard.html"><i class="bi bi-speedometer2"></i> Inicio</a>
+    <a href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
+    <a href="ventas.html" class="active"><i class="bi bi-receipt"></i> Ventas</a>
+    <a href="categorias.html"><i class="bi bi-tags"></i> Categorías</a>
+    <a href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+    <a href="login.html" class="subnav-end"><i class="bi bi-box-arrow-right"></i> Salir</a>
+    </div>
+  </nav>
 
   <main class="page-content">
 
     <div class="page-header">
       <h1><i class="bi bi-receipt"></i> Nueva Venta</h1>
-      <a href="ventas.html" class="btn-cancel"><i class="bi bi-arrow-left"></i> Volver</a>
+      <a href="ventas.html" class="btn-secondary"><i class="bi bi-arrow-left"></i> Volver</a>
     </div>
 
     <section class="form-card">
+      <div class="form-card-title"><i class="bi bi-receipt"></i> Datos de la venta</div>
       <form action="ventas.html">
-
         <div class="form-group">
           <label for="producto">Producto</label>
           <select id="producto" name="producto">
-            <option value="">-- Seleccionar producto --</option>
-            <option value="1">Camisa Oxford — $45.00</option>
-            <option value="2">Pantalón Chino — $60.00</option>
-            <option value="3">Chaqueta Casual — $95.00</option>
-            <option value="4">Polo Clásico — $30.00</option>
-            <option value="5">Jean Slim Fit — $75.00</option>
+            <option value="">-- Seleccionar --</option>
+            <option>Camisa Oxford — $45.00</option>
+            <option>Pantalón Chino — $60.00</option>
+            <option>Chaqueta Casual — $95.00</option>
+            <option>Polo Clásico — $30.00</option>
+            <option>Jean Slim Fit — $75.00</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="cantidad">Cantidad</label>
           <input type="number" id="cantidad" name="cantidad" placeholder="1" min="1" required />
         </div>
-
         <div class="form-group">
-          <label for="cliente">Nombre del cliente</label>
-          <input type="text" id="cliente" name="cliente" placeholder="Ej: Carlos Mamani" required />
+          <label for="cliente">Cliente</label>
+          <input type="text" id="cliente" name="cliente" placeholder="Nombre del cliente" required />
         </div>
-
         <div class="form-group">
-          <label for="email">Correo del cliente</label>
+          <label for="email">Correo</label>
           <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" />
         </div>
-
         <div class="form-group">
-          <label for="fecha">Fecha de venta</label>
+          <label for="fecha">Fecha</label>
           <input type="date" id="fecha" name="fecha" required />
         </div>
-
         <div class="form-group">
           <label for="metodo">Método de pago</label>
           <select id="metodo" name="metodo">
-            <option value="Efectivo">Efectivo</option>
-            <option value="Tarjeta">Tarjeta</option>
-            <option value="Transferencia">Transferencia</option>
+            <option>Efectivo</option><option>Tarjeta</option><option>Transferencia</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="notas">Notas</label>
-          <textarea id="notas" name="notas" placeholder="Observaciones adicionales..."></textarea>
+          <textarea id="notas" name="notas" placeholder="Observaciones..."></textarea>
         </div>
-
         <div class="form-actions">
           <button type="submit" class="btn-primary"><i class="bi bi-floppy"></i> Registrar Venta</button>
           <a href="ventas.html" class="btn-cancel"><i class="bi bi-x-lg"></i> Cancelar</a>
         </div>
-
       </form>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <p>© 2026 StyleShop · Todos los derechos reservados</p>
+    <p>© 2026 StyleShop · Sistema de Gestión</p>
   </footer>
 
 </body>

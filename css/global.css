@@ -4,48 +4,58 @@
 /* ── Bootstrap Icons ────────────────────────────────────────── */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
 
-/* ── Variables — Azul Cielo + Ámbar ────────────────────── */
+/* ── Variables ──────────────────────────────────────────────── */
 :root {
-  --color-bg:           #f9fbff;
+  /* Fondos */
+  --color-bg:           #f0f2f5;
   --color-surface:      #ffffff;
-  --color-surface-alt:  #f3f8ff;
-  --color-border:       #d0e4f7;
-  --color-border-light: #e4f0fb;
+  --color-surface-alt:  #f7f9fc;
 
+  /* Bordes */
+  --color-border:       #dde3ea;
+  --color-border-light: #edf1f5;
+
+  /* Topbar: blanco | Subnav: azul navy */
+  --color-topbar:       #ffffff;
+  --color-subnav:       #1e3f73;
+
+  /* Azul de acento para nav activo */
   --color-primary:      #2196f3;
   --color-primary-dark: #1565c0;
-  --color-primary-light:#42a5f5;
+  --color-primary-light:#64b5f6;
   --color-accent:       #e3f2fd;
 
+  /* Ámbar para botones de acción */
   --color-amber:        #f59e0b;
   --color-amber-dark:   #d97706;
   --color-amber-light:  #fef3c7;
 
-  --color-navy:         #1a237e;
-
+  /* Texto */
   --color-text:         #1a2a3a;
   --color-muted:        #546e7a;
   --color-muted-light:  #90a4ae;
 
-  --color-success:      #2e7d32;
-  --color-success-bg:   #e8f5e9;
+  /* Estados */
+  --color-success:      #1b7a3b;
+  --color-success-bg:   #e6f4ea;
+  --color-warning:      #b45309;
+  --color-warning-bg:   #fef9c3;
   --color-danger:       #c62828;
   --color-danger-bg:    #ffebee;
+  --color-info:         #0277bd;
+  --color-info-bg:      #e1f5fe;
 
+  /* Tipografía y forma */
   --font-main:          'Inter', sans-serif;
-  --radius:             8px;
-  --radius-lg:          12px;
-  --shadow-sm:          0 1px 3px rgba(33, 150, 243, 0.08), 0 1px 2px rgba(33, 150, 243, 0.04);
-  --shadow-md:          0 4px 14px rgba(33, 150, 243, 0.14), 0 2px 4px rgba(33, 150, 243, 0.06);
-  --shadow-lg:          0 10px 28px rgba(33, 150, 243, 0.16);
+  --radius:             6px;
+  --radius-lg:          10px;
+  --shadow-sm:          0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:          0 3px 10px rgba(0,0,0,0.12);
+  --shadow-lg:          0 8px 24px rgba(0,0,0,0.14);
 }
 
 /* ── Reset ──────────────────────────────────────────────────── */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 /* ── Base ───────────────────────────────────────────────────── */
 body {
@@ -53,6 +63,6 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   min-height: 100vh;
-  font-size: 15px;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
 }
