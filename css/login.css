@@ -35,7 +35,7 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: var(--color-primary);
+  background: var(--color-amber);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +98,7 @@ body {
   width: 100%;
   padding: 0.8rem;
   margin-top: 0.5rem;
-  background: var(--color-primary);
+  background: var(--color-amber);
   border: none;
   border-radius: var(--radius);
   color: #fff;
@@ -114,7 +114,7 @@ body {
 }
 
 .btn-login:hover {
-  background: var(--color-primary-mid);
+  background: var(--color-amber-dark);
   box-shadow: var(--shadow-md);
 }
 
