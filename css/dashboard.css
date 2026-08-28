@@ -1,67 +1,243 @@
-/*
-  ARCHIVO: css/dashboard.css
-  ============================================================
-  CONTENIDO (estilos del sistema interior: dashboard, tablas, formularios):
+/* ── Topbar ──────────────────────────────────────────────────── */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  height: 56px;
+  background: var(--color-primary);
+  color: #fff;
+}
 
-  LAYOUT:
-  - .app-layout:
-      · display grid, grid-template-columns: 240px 1fr
-      · min-height 100vh
-  - .main-content:
-      · padding 2rem, overflow-y auto
+.topbar-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
 
-  HEADER DE PÁGINA:
-  - .page-header:
-      · display flex, justify-content space-between, align-items center
-      · margin-bottom 2rem, padding-bottom 1rem
-      · border-bottom 1px solid var(--color-border)
-  - .page-title: font-size 1.5rem, font-weight 700, gradiente texto
+.topbar-nav {
+  display: flex;
+  gap: 0.25rem;
+  flex: 1;
+}
 
-  TARJETAS DE MÉTRICAS (dashboard):
-  - .metrics-grid: display grid, 4 columnas, gap 1.5rem
-  - .metric-card:
-      · background var(--color-surface), border-radius var(--radius)
-      · padding 1.5rem, border 1px solid var(--color-border)
-      · hover: translateY(-3px), box-shadow con color primario
-  - .metric-icon: emoji/ícono grande, color primario
-  - .metric-value: font-size 2rem, font-weight 700
-  - .metric-label: color muted, font-size 0.85rem
+.topbar-nav a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
 
-  GRÁFICO DE BARRAS CSS:
-  - .chart-container: background surface, border-radius, padding
-  - .chart-bars: display flex, align-items flex-end, gap 0.5rem, height 150px
-  - .bar: flex 1, background gradiente primario/secundario, border-radius 4px 4px 0 0
-  - .bar-label: texto debajo de cada barra, font-size 0.7rem, color muted
+.topbar-nav a:hover,
+.topbar-nav a.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
 
-  TABLAS:
-  - .table-wrapper: overflow-x auto, border-radius var(--radius), border var(--color-border)
-  - table: width 100%, border-collapse collapse
-  - thead th: background var(--color-surface), padding 0.75rem 1rem, text-align left,
-               color var(--color-muted), font-size 0.8rem, text-transform uppercase
-  - tbody tr: border-bottom 1px solid var(--color-border), transition background 0.15s
-  - tbody tr:hover: background rgba(255,255,255,0.03)
-  - td: padding 0.85rem 1rem, font-size 0.9rem
+.btn-logout {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
 
-  BARRA DE BÚSQUEDA Y FILTROS:
-  - .table-controls: display flex, gap 1rem, margin-bottom 1rem, align-items center
-  - .search-input: input con ícono de lupa, estilo igual que login inputs
-  - .filter-select: select estilado igual que inputs
+.btn-logout:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
 
-  FORMULARIOS (nuevo-producto, nueva-venta):
-  - .form-card: max-width 700px, background surface, border-radius, padding 2rem
-  - .form-grid: display grid, 2 columnas, gap 1.5rem
-  - .form-group, label, input, select, textarea: igual que login pero adaptado
-  - .form-summary: sección de resumen (solo nueva-venta), background bg, border primario
-  - Mensajes de validación: .field-error en rojo bajo cada campo
-  - Toast de éxito: .toast-success, posición fixed bottom-right, animación slideIn
+/* ── Contenido principal ─────────────────────────────────────── */
+.page-content {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
 
-  PAGINACIÓN:
-  - .pagination: display flex, gap 0.5rem, justify-content center, margin-top 1.5rem
-  - .page-btn: botón pequeño, borde, hover primario, .active con fondo primario
+/* ── Encabezado de página ────────────────────────────────────── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
 
-  RESPONSIVE:
-  - @media (max-width: 768px):
-      · .app-layout: 1 columna, sidebar se convierte en barra superior o menú hamburguesa
-      · .metrics-grid: 2 columnas
-  ============================================================
-*/
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ── Botones ─────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--color-secondary);
+}
+
+.btn-sm {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 0.25rem;
+}
+
+.btn-edit {
+  background: #e3f0ff;
+  color: var(--color-primary);
+  border: 1px solid #b3d1f5;
+}
+
+.btn-edit:hover {
+  background: #cde0ff;
+}
+
+.btn-delete {
+  background: #fdecea;
+  color: #c62828;
+  border: 1px solid #f5b3b0;
+}
+
+.btn-delete:hover {
+  background: #fcd5d3;
+}
+
+/* ── Tabla ───────────────────────────────────────────────────── */
+.table-section {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: #f0f5ff;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.15s;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #f7faff;
+}
+
+td {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+/* ── Formularios ─────────────────────────────────────────────── */
+.form-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 620px;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-cancel {
+  background: #fff;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.55rem 1.2rem;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-cancel:hover {
+  background: var(--color-bg);
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.page-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: 3rem;
+}
