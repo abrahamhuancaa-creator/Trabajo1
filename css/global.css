@@ -1,17 +1,22 @@
 /* ── Google Fonts ───────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ── Variables ──────────────────────────────────────────────── */
 :root {
-  --color-bg:        #f4f7fb;
+  --color-bg:        #f0f4f8;
   --color-surface:   #ffffff;
-  --color-border:    #d0dce8;
+  --color-border:    #dce4ed;
   --color-primary:   #1565c0;
+  --color-primary-dark: #0d47a1;
   --color-secondary: #1e88e5;
+  --color-accent:    #e3f2fd;
   --color-text:      #1a2a3a;
   --color-muted:     #607080;
+  --color-success:   #2e7d32;
   --font-main:       'Inter', sans-serif;
   --radius:          10px;
+  --shadow-sm:       0 1px 4px rgba(21, 101, 192, 0.08);
+  --shadow-md:       0 4px 16px rgba(21, 101, 192, 0.12);
 }
 
 /* ── Reset ──────────────────────────────────────────────────── */
