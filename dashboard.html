@@ -9,13 +9,100 @@
 </head>
 <body>
 
-  <header>
+  <header class="topbar">
+    <div class="topbar-brand">👔 StyleShop</div>
+    <nav class="topbar-nav">
+      <a href="dashboard.html" class="active">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="clientes.html">Clientes</a>
+    </nav>
+    <a href="login.html" class="btn-logout">Salir</a>
   </header>
 
-  <main>
+  <main class="page-content">
+
+    <div class="page-header">
+      <h1>Bienvenido, Admin</h1>
+    </div>
+
+    <section class="cards-grid">
+
+      <div class="info-card">
+        <div class="info-card-icon">🧾</div>
+        <div class="info-card-data">
+          <span class="info-card-value">5</span>
+          <span class="info-card-label">Productos</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-icon">💰</div>
+        <div class="info-card-data">
+          <span class="info-card-value">5</span>
+          <span class="info-card-label">Ventas</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-icon">🏷️</div>
+        <div class="info-card-data">
+          <span class="info-card-value">4</span>
+          <span class="info-card-label">Categorías</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-icon">👤</div>
+        <div class="info-card-data">
+          <span class="info-card-value">5</span>
+          <span class="info-card-label">Clientes</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="table-section" style="margin-top: 2rem;">
+      <div class="page-header" style="padding: 1rem 1rem 0;">
+        <h2 style="font-size: 1rem; color: var(--color-primary);">Últimas Ventas</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Producto</th>
+            <th>Cliente</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>25/08/2026</td>
+            <td>Jean Slim Fit</td>
+            <td>Marco Condori</td>
+            <td>$150.00</td>
+          </tr>
+          <tr>
+            <td>24/08/2026</td>
+            <td>Polo Clásico</td>
+            <td>José Rojas</td>
+            <td>$90.00</td>
+          </tr>
+          <tr>
+            <td>22/08/2026</td>
+            <td>Chaqueta Casual</td>
+            <td>Pedro Flores</td>
+            <td>$95.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 
-  <footer>
+  <footer class="page-footer">
+    <p>© 2026 StyleShop · Todos los derechos reservados</p>
   </footer>
 
 </body>
