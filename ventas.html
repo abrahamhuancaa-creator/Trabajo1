@@ -9,95 +9,88 @@
 </head>
 <body>
 
+  <!-- Barra superior -->
   <header class="topbar">
     <div class="topbar-brand"><i class="bi bi-bag-fill"></i> StyleShop</div>
-    <nav class="topbar-nav">
-      <a href="dashboard.html"><i class="bi bi-house-door"></i> Inicio</a>
-      <a href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
-      <a href="ventas.html" class="active"><i class="bi bi-receipt"></i> Ventas</a>
-      <a href="categorias.html"><i class="bi bi-tags"></i> Categorías</a>
-      <a href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
-    </nav>
-    <a href="login.html" class="btn-logout"><i class="bi bi-box-arrow-right"></i> Salir</a>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-actions">
+      <i class="bi bi-bell"></i>
+      <i class="bi bi-gear"></i>
+      <div class="topbar-avatar">AD</div>
+    </div>
   </header>
+
+  <!-- Barra de navegación -->
+  <nav class="subnav">
+    <div class="subnav-inner">
+    <a href="dashboard.html"><i class="bi bi-speedometer2"></i> Inicio</a>
+    <a href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
+    <a href="ventas.html" class="active"><i class="bi bi-receipt"></i> Ventas</a>
+    <a href="categorias.html"><i class="bi bi-tags"></i> Categorías</a>
+    <a href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+    <a href="login.html" class="subnav-end"><i class="bi bi-box-arrow-right"></i> Salir</a>
+    </div>
+  </nav>
 
   <main class="page-content">
 
     <div class="page-header">
       <h1><i class="bi bi-receipt"></i> Ventas</h1>
-      <a href="nueva-venta.html" class="btn-primary"><i class="bi bi-plus-lg"></i> Nueva Venta</a>
+      <div class="page-actions">
+        <a href="nueva-venta.html" class="btn-primary"><i class="bi bi-plus-lg"></i> Nueva Venta</a>
+      </div>
     </div>
 
     <section class="table-section">
+      <div class="table-toolbar">
+        <span class="table-toolbar-title">Historial de ventas</span>
+      </div>
       <table>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Fecha</th>
-            <th>Producto</th>
-            <th>Categoría</th>
-            <th>Cantidad</th>
-            <th>Precio Unit.</th>
-            <th>Total</th>
-            <th>Cliente</th>
-            <th>Acciones</th>
+            <th>#</th><th>Fecha</th><th>Producto</th><th>Categoría</th><th>Cant.</th><th>Precio</th><th>Total</th><th>Cliente</th><th>Estado</th><th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>20/08/2026</td>
-            <td>Camisa Oxford</td>
-            <td>Camisas</td>
-            <td>2</td>
-            <td>$45.00</td>
-            <td>$90.00</td>
-            <td>Carlos Mamani</td>
-            <td><span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span></td>
+            <td>1</td><td>20/08/2026</td><td>Camisa Oxford</td><td>Camisas</td><td>2</td><td>$45.00</td><td>$90.00</td><td>Carlos Mamani</td>
+            <td><span class="badge badge-success"><i class="bi bi-check-circle-fill"></i> Completado</span></td>
+            <td>
+              <a href="nueva-venta.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
+            </td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>21/08/2026</td>
-            <td>Pantalón Chino</td>
-            <td>Pantalones</td>
-            <td>1</td>
-            <td>$60.00</td>
-            <td>$60.00</td>
-            <td>Luis Quispe</td>
-            <td><span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span></td>
+            <td>2</td><td>21/08/2026</td><td>Pantalón Chino</td><td>Pantalones</td><td>1</td><td>$60.00</td><td>$60.00</td><td>Luis Quispe</td>
+            <td><span class="badge badge-success"><i class="bi bi-check-circle-fill"></i> Completado</span></td>
+            <td>
+              <a href="nueva-venta.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
+            </td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>22/08/2026</td>
-            <td>Chaqueta Casual</td>
-            <td>Chaquetas</td>
-            <td>1</td>
-            <td>$95.00</td>
-            <td>$95.00</td>
-            <td>Pedro Flores</td>
-            <td><span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span></td>
+            <td>3</td><td>22/08/2026</td><td>Chaqueta Casual</td><td>Chaquetas</td><td>1</td><td>$95.00</td><td>$95.00</td><td>Pedro Flores</td>
+            <td><span class="badge badge-warning"><i class="bi bi-clock-fill"></i> Pendiente</span></td>
+            <td>
+              <a href="nueva-venta.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
+            </td>
           </tr>
           <tr>
-            <td>4</td>
-            <td>24/08/2026</td>
-            <td>Polo Clásico</td>
-            <td>Camisas</td>
-            <td>3</td>
-            <td>$30.00</td>
-            <td>$90.00</td>
-            <td>José Rojas</td>
-            <td><span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span></td>
+            <td>4</td><td>24/08/2026</td><td>Polo Clásico</td><td>Camisas</td><td>3</td><td>$30.00</td><td>$90.00</td><td>José Rojas</td>
+            <td><span class="badge badge-success"><i class="bi bi-check-circle-fill"></i> Completado</span></td>
+            <td>
+              <a href="nueva-venta.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
+            </td>
           </tr>
           <tr>
-            <td>5</td>
-            <td>25/08/2026</td>
-            <td>Jean Slim Fit</td>
-            <td>Pantalones</td>
-            <td>2</td>
-            <td>$75.00</td>
-            <td>$150.00</td>
-            <td>Marco Condori</td>
-            <td><span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span></td>
+            <td>5</td><td>25/08/2026</td><td>Jean Slim Fit</td><td>Pantalones</td><td>2</td><td>$75.00</td><td>$150.00</td><td>Marco Condori</td>
+            <td><span class="badge badge-info"><i class="bi bi-arrow-repeat"></i> En proceso</span></td>
+            <td>
+              <a href="nueva-venta.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -106,7 +99,7 @@
   </main>
 
   <footer class="page-footer">
-    <p>© 2026 StyleShop · Todos los derechos reservados</p>
+    <p>© 2026 StyleShop · Sistema de Gestión</p>
   </footer>
 
 </body>

@@ -9,17 +9,28 @@
 </head>
 <body>
 
+  <!-- Barra superior -->
   <header class="topbar">
     <div class="topbar-brand"><i class="bi bi-bag-fill"></i> StyleShop</div>
-    <nav class="topbar-nav">
-      <a href="dashboard.html"><i class="bi bi-house-door"></i> Inicio</a>
-      <a href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
-      <a href="ventas.html"><i class="bi bi-receipt"></i> Ventas</a>
-      <a href="categorias.html"><i class="bi bi-tags"></i> Categorías</a>
-      <a href="clientes.html" class="active"><i class="bi bi-people"></i> Clientes</a>
-    </nav>
-    <a href="login.html" class="btn-logout"><i class="bi bi-box-arrow-right"></i> Salir</a>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-actions">
+      <i class="bi bi-bell"></i>
+      <i class="bi bi-gear"></i>
+      <div class="topbar-avatar">AD</div>
+    </div>
   </header>
+
+  <!-- Barra de navegación -->
+  <nav class="subnav">
+    <div class="subnav-inner">
+    <a href="dashboard.html"><i class="bi bi-speedometer2"></i> Inicio</a>
+    <a href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
+    <a href="ventas.html"><i class="bi bi-receipt"></i> Ventas</a>
+    <a href="categorias.html"><i class="bi bi-tags"></i> Categorías</a>
+    <a href="clientes.html" class="active"><i class="bi bi-people"></i> Clientes</a>
+    <a href="login.html" class="subnav-end"><i class="bi bi-box-arrow-right"></i> Salir</a>
+    </div>
+  </nav>
 
   <main class="page-content">
 
@@ -29,71 +40,52 @@
     </div>
 
     <section class="table-section">
+      <div class="table-toolbar">
+        <span class="table-toolbar-title">Lista de clientes</span>
+      </div>
       <table>
         <thead>
-          <tr>
-            <th>#</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Teléfono</th>
-            <th>Dirección</th>
-            <th>Acciones</th>
-          </tr>
+          <tr><th>#</th><th>CI</th><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Ciudad</th><th>Estado</th><th>Acciones</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Carlos Mamani</td>
-            <td>carlos@mail.com</td>
-            <td>70012345</td>
-            <td>La Paz, Bolivia</td>
+            <td>1</td><td>12345678</td><td>Carlos Mamani</td><td>carlos@mail.com</td><td>70012345</td><td>La Paz</td>
+            <td><span class="badge badge-success">Activo</span></td>
             <td>
-              <a href="nuevo-cliente.html" class="btn-sm btn-edit"><i class="bi bi-pencil"></i> Editar</a>
-              <span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
             </td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Luis Quispe</td>
-            <td>luis@mail.com</td>
-            <td>71234567</td>
-            <td>Cochabamba, Bolivia</td>
+            <td>2</td><td>12345679</td><td>Luis Quispe</td><td>luis@mail.com</td><td>71234567</td><td>Cochabamba</td>
+            <td><span class="badge badge-success">Activo</span></td>
             <td>
-              <a href="nuevo-cliente.html" class="btn-sm btn-edit"><i class="bi bi-pencil"></i> Editar</a>
-              <span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
             </td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>Pedro Flores</td>
-            <td>pedro@mail.com</td>
-            <td>72345678</td>
-            <td>Santa Cruz, Bolivia</td>
+            <td>3</td><td>12345680</td><td>Pedro Flores</td><td>pedro@mail.com</td><td>72345678</td><td>Santa Cruz</td>
+            <td><span class="badge badge-success">Activo</span></td>
             <td>
-              <a href="nuevo-cliente.html" class="btn-sm btn-edit"><i class="bi bi-pencil"></i> Editar</a>
-              <span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
             </td>
           </tr>
           <tr>
-            <td>4</td>
-            <td>José Rojas</td>
-            <td>jose@mail.com</td>
-            <td>73456789</td>
-            <td>Oruro, Bolivia</td>
+            <td>4</td><td>12345681</td><td>José Rojas</td><td>jose@mail.com</td><td>73456789</td><td>Oruro</td>
+            <td><span class="badge badge-success">Activo</span></td>
             <td>
-              <a href="nuevo-cliente.html" class="btn-sm btn-edit"><i class="bi bi-pencil"></i> Editar</a>
-              <span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
             </td>
           </tr>
           <tr>
-            <td>5</td>
-            <td>Marco Condori</td>
-            <td>marco@mail.com</td>
-            <td>74567890</td>
-            <td>Potosí, Bolivia</td>
+            <td>5</td><td>12345682</td><td>Marco Condori</td><td>marco@mail.com</td><td>74567890</td><td>Potosí</td>
+            <td><span class="badge badge-warning">Inactivo</span></td>
             <td>
-              <a href="nuevo-cliente.html" class="btn-sm btn-edit"><i class="bi bi-pencil"></i> Editar</a>
-              <span class="btn-sm btn-delete"><i class="bi bi-trash3"></i> Eliminar</span>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit" title="Editar"><i class="bi bi-pencil"></i></a>
+              <span class="btn-sm btn-delete" title="Eliminar"><i class="bi bi-trash3"></i></span>
             </td>
           </tr>
         </tbody>
@@ -103,7 +95,7 @@
   </main>
 
   <footer class="page-footer">
-    <p>© 2026 StyleShop · Todos los derechos reservados</p>
+    <p>© 2026 StyleShop · Sistema de Gestión</p>
   </footer>
 
 </body>

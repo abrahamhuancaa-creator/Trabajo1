@@ -1,13 +1,14 @@
-/* ── Fondo ──────────────────────────────────────────────────── */
+/* ── Login Page ──────────────────────────────────────────────── */
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--color-bg);
   min-height: 100vh;
 }
 
-/* ── Tarjeta ────────────────────────────────────────────────── */
+/* ── Card ────────────────────────────────────────────────────── */
 .login-wrapper {
   width: 100%;
   display: flex;
@@ -17,7 +18,7 @@ body {
 
 .login-card {
   background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
   width: 100%;
@@ -25,17 +26,17 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-/* ── Cabecera ───────────────────────────────────────────────── */
+/* ── Header ─────────────────────────────────────────────────── */
 .login-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .login-logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: var(--color-amber);
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: var(--color-topbar);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,74 +44,76 @@ body {
 }
 
 .login-logo i {
-  font-size: 1.8rem;
-  color: #fff;
+  font-size: 1.6rem;
+  color: var(--color-amber);
 }
 
 .login-header h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-text);
+  letter-spacing: 0.02em;
 }
 
 .login-header p {
   color: var(--color-muted);
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   margin-top: 0.3rem;
 }
 
-/* ── Formulario ─────────────────────────────────────────────── */
+/* ── Form ────────────────────────────────────────────────────── */
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
 }
 
 .form-group label {
   display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--color-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.45rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
 }
 
 .form-group input {
   width: 100%;
-  padding: 0.72rem 1rem;
+  padding: 0.65rem 0.9rem;
   background: var(--color-surface-alt);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   color: var(--color-text);
   font-family: var(--font-main);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--color-primary-light);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(33,150,243,0.12);
   background: #fff;
 }
 
-/* ── Botón ──────────────────────────────────────────────────── */
+/* ── Botón ───────────────────────────────────────────────────── */
 .btn-login {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.75rem;
   margin-top: 0.5rem;
   background: var(--color-amber);
   border: none;
   border-radius: var(--radius);
   color: #fff;
   font-family: var(--font-main);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.15s, box-shadow 0.15s;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 .btn-login:hover {
@@ -118,7 +121,7 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-/* ── Pie ────────────────────────────────────────────────────── */
+/* ── Footer ─────────────────────────────────────────────────── */
 .login-footer {
   text-align: center;
   margin-top: 1.5rem;
@@ -126,5 +129,5 @@ body {
 
 .login-footer p {
   color: var(--color-muted-light);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
 }
