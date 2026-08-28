@@ -9,13 +9,86 @@
 </head>
 <body>
 
-  <header>
+  <header class="topbar">
+    <div class="topbar-brand">👔 StyleShop</div>
+    <nav class="topbar-nav">
+      <a href="dashboard.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html" class="active">Ventas</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="clientes.html">Clientes</a>
+    </nav>
+    <a href="login.html" class="btn-logout">Salir</a>
   </header>
 
-  <main>
+  <main class="page-content">
+
+    <div class="page-header">
+      <h1>Nueva Venta</h1>
+      <a href="ventas.html" class="btn-cancel">← Volver</a>
+    </div>
+
+    <section class="form-card">
+      <form action="ventas.html">
+
+        <div class="form-group">
+          <label for="producto">Producto</label>
+          <select id="producto" name="producto">
+            <option value="">-- Seleccionar producto --</option>
+            <option value="1">Camisa Oxford — $45.00</option>
+            <option value="2">Pantalón Chino — $60.00</option>
+            <option value="3">Chaqueta Casual — $95.00</option>
+            <option value="4">Polo Clásico — $30.00</option>
+            <option value="5">Jean Slim Fit — $75.00</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad" name="cantidad" placeholder="1" min="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cliente">Nombre del cliente</label>
+          <input type="text" id="cliente" name="cliente" placeholder="Ej: Carlos Mamani" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo del cliente</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha de venta</label>
+          <input type="date" id="fecha" name="fecha" required />
+        </div>
+
+        <div class="form-group">
+          <label for="metodo">Método de pago</label>
+          <select id="metodo" name="metodo">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Transferencia">Transferencia</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notas">Notas</label>
+          <textarea id="notas" name="notas" placeholder="Observaciones adicionales..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Registrar Venta</button>
+          <a href="ventas.html" class="btn-cancel">Cancelar</a>
+        </div>
+
+      </form>
+    </section>
+
   </main>
 
-  <footer>
+  <footer class="page-footer">
+    <p>© 2026 StyleShop · Todos los derechos reservados</p>
   </footer>
 
 </body>
