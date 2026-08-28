@@ -9,13 +9,101 @@
 </head>
 <body>
 
-  <header>
+  <header class="topbar">
+    <div class="topbar-brand">👔 StyleShop</div>
+    <nav class="topbar-nav">
+      <a href="dashboard.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="clientes.html" class="active">Clientes</a>
+    </nav>
+    <a href="login.html" class="btn-logout">Salir</a>
   </header>
 
-  <main>
+  <main class="page-content">
+
+    <div class="page-header">
+      <h1>Clientes</h1>
+      <a href="nuevo-cliente.html" class="btn-primary">+ Nuevo Cliente</a>
+    </div>
+
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Carlos Mamani</td>
+            <td>carlos@mail.com</td>
+            <td>70012345</td>
+            <td>La Paz, Bolivia</td>
+            <td>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit">Editar</a>
+              <span class="btn-sm btn-delete">Eliminar</span>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Luis Quispe</td>
+            <td>luis@mail.com</td>
+            <td>71234567</td>
+            <td>Cochabamba, Bolivia</td>
+            <td>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit">Editar</a>
+              <span class="btn-sm btn-delete">Eliminar</span>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Pedro Flores</td>
+            <td>pedro@mail.com</td>
+            <td>72345678</td>
+            <td>Santa Cruz, Bolivia</td>
+            <td>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit">Editar</a>
+              <span class="btn-sm btn-delete">Eliminar</span>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>José Rojas</td>
+            <td>jose@mail.com</td>
+            <td>73456789</td>
+            <td>Oruro, Bolivia</td>
+            <td>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit">Editar</a>
+              <span class="btn-sm btn-delete">Eliminar</span>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Marco Condori</td>
+            <td>marco@mail.com</td>
+            <td>74567890</td>
+            <td>Potosí, Bolivia</td>
+            <td>
+              <a href="nuevo-cliente.html" class="btn-sm btn-edit">Editar</a>
+              <span class="btn-sm btn-delete">Eliminar</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 
-  <footer>
+  <footer class="page-footer">
+    <p>© 2026 StyleShop · Todos los derechos reservados</p>
   </footer>
 
 </body>
