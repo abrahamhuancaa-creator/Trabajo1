@@ -1,38 +1,107 @@
-/*
-  ARCHIVO: css/login.css
-  ============================================================
-  CONTENIDO (estilos exclusivos de login.html):
-  - .login-wrapper:
-      · Ocupa 100vh, display flex, centrado horizontal y vertical
-      · Fondo con gradiente animado diagonal (morado oscuro → negro → rosa oscuro)
-      · Animación @keyframes gradientShift de 8s infinita
-  - .login-card:
-      · Tarjeta centrada, max-width 400px
-      · Fondo: var(--color-surface), border-radius: var(--radius)
-      · Box-shadow con tono morado: 0 0 40px rgba(224,64,251,0.2)
-      · Padding 2.5rem, animación fadeInUp al cargar
-  - .login-logo:
-      · Emoji o SVG de logo centrado, font-size 3rem, margin-bottom 0.5rem
-  - .login-title:
-      · Nombre de la tienda, gradiente texto morado→rosa (background-clip: text)
-      · font-size 1.5rem, font-weight 700
-  - .login-subtitle:
-      · "Sistema de Gestión", color: var(--color-muted), font-size 0.9rem
-  - .form-group:
-      · margin-bottom 1.2rem
-  - .form-group label:
-      · display block, font-size 0.85rem, color: var(--color-muted), margin-bottom 0.4rem
-  - .form-group input:
-      · width 100%, padding 0.75rem 1rem
-      · background: var(--color-bg), border: 1px solid var(--color-border)
-      · border-radius 8px, color: var(--color-text)
-      · transition border-color 0.2s, box-shadow 0.2s
-  - .form-group input:focus:
-      · border-color: var(--color-primary), box-shadow morado suave
-  - .login-error:
-      · Mensaje de error rojo, oculto por defecto (display:none)
-      · background rojo translúcido, border-left 3px rojo, padding 0.5rem
-      · Se muestra con clase .visible
-  - @keyframes fadeInUp, @keyframes gradientShift
-  ============================================================
-*/
+/* ── Fondo ──────────────────────────────────────────────────── */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+/* ── Tarjeta ────────────────────────────────────────────────── */
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 2px 16px rgba(21, 101, 192, 0.1);
+}
+
+/* ── Cabecera ───────────────────────────────────────────────── */
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-logo {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.login-header p {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  margin-top: 0.25rem;
+}
+
+/* ── Formulario ─────────────────────────────────────────────── */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* ── Botón ──────────────────────────────────────────────────── */
+.btn-login {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: var(--color-secondary);
+}
+
+/* ── Pie ────────────────────────────────────────────────────── */
+.login-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.login-footer p {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
