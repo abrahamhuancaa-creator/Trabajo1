@@ -1,0 +1,38 @@
+/*
+  ARCHIVO: css/login.css
+  ============================================================
+  CONTENIDO (estilos exclusivos de login.html):
+  - .login-wrapper:
+      · Ocupa 100vh, display flex, centrado horizontal y vertical
+      · Fondo con gradiente animado diagonal (morado oscuro → negro → rosa oscuro)
+      · Animación @keyframes gradientShift de 8s infinita
+  - .login-card:
+      · Tarjeta centrada, max-width 400px
+      · Fondo: var(--color-surface), border-radius: var(--radius)
+      · Box-shadow con tono morado: 0 0 40px rgba(224,64,251,0.2)
+      · Padding 2.5rem, animación fadeInUp al cargar
+  - .login-logo:
+      · Emoji o SVG de logo centrado, font-size 3rem, margin-bottom 0.5rem
+  - .login-title:
+      · Nombre de la tienda, gradiente texto morado→rosa (background-clip: text)
+      · font-size 1.5rem, font-weight 700
+  - .login-subtitle:
+      · "Sistema de Gestión", color: var(--color-muted), font-size 0.9rem
+  - .form-group:
+      · margin-bottom 1.2rem
+  - .form-group label:
+      · display block, font-size 0.85rem, color: var(--color-muted), margin-bottom 0.4rem
+  - .form-group input:
+      · width 100%, padding 0.75rem 1rem
+      · background: var(--color-bg), border: 1px solid var(--color-border)
+      · border-radius 8px, color: var(--color-text)
+      · transition border-color 0.2s, box-shadow 0.2s
+  - .form-group input:focus:
+      · border-color: var(--color-primary), box-shadow morado suave
+  - .login-error:
+      · Mensaje de error rojo, oculto por defecto (display:none)
+      · background rojo translúcido, border-left 3px rojo, padding 0.5rem
+      · Se muestra con clase .visible
+  - @keyframes fadeInUp, @keyframes gradientShift
+  ============================================================
+*/

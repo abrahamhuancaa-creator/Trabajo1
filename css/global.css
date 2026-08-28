@@ -1,0 +1,27 @@
+/*
+  ARCHIVO: css/global.css
+  ============================================================
+  CONTENIDO:
+  - @import Google Fonts: Inter (300, 400, 600, 700)
+  - Reset universal (* { margin:0; padding:0; box-sizing:border-box })
+  - Variables CSS (:root):
+      --color-bg:        #0f0f14   (fondo principal, negro suave)
+      --color-surface:   #1a1a2e   (cards y sidebar)
+      --color-border:    #2a2a3e   (bordes suaves)
+      --color-primary:   #e040fb   (morado vibrante - acción principal)
+      --color-secondary: #ff4081   (rosa - acción secundaria)
+      --color-success:   #00e676   (verde - éxito)
+      --color-danger:    #ff5252   (rojo - error/eliminar)
+      --color-text:      #f0f0f0   (texto principal)
+      --color-muted:     #a0a0b0   (texto secundario)
+      --font-main:       'Inter', sans-serif
+      --radius:          10px
+      --shadow:          0 4px 20px rgba(0,0,0,0.4)
+  - Estilos base del body (fondo, fuente, color)
+  - Componente .btn (base de todos los botones)
+  - Variantes: .btn-primary, .btn-secondary, .btn-danger, .btn-sm
+  - Sidebar: .sidebar, .sidebar-logo, .sidebar-nav, .sidebar-nav a, .sidebar-nav a.active
+  - Layout principal: .main-content, .page-header
+  - Badge de estado: .badge, .badge-success, .badge-danger, .badge-warning
+  ============================================================
+*/

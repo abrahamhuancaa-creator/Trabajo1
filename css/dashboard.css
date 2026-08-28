@@ -1,0 +1,67 @@
+/*
+  ARCHIVO: css/dashboard.css
+  ============================================================
+  CONTENIDO (estilos del sistema interior: dashboard, tablas, formularios):
+
+  LAYOUT:
+  - .app-layout:
+      · display grid, grid-template-columns: 240px 1fr
+      · min-height 100vh
+  - .main-content:
+      · padding 2rem, overflow-y auto
+
+  HEADER DE PÁGINA:
+  - .page-header:
+      · display flex, justify-content space-between, align-items center
+      · margin-bottom 2rem, padding-bottom 1rem
+      · border-bottom 1px solid var(--color-border)
+  - .page-title: font-size 1.5rem, font-weight 700, gradiente texto
+
+  TARJETAS DE MÉTRICAS (dashboard):
+  - .metrics-grid: display grid, 4 columnas, gap 1.5rem
+  - .metric-card:
+      · background var(--color-surface), border-radius var(--radius)
+      · padding 1.5rem, border 1px solid var(--color-border)
+      · hover: translateY(-3px), box-shadow con color primario
+  - .metric-icon: emoji/ícono grande, color primario
+  - .metric-value: font-size 2rem, font-weight 700
+  - .metric-label: color muted, font-size 0.85rem
+
+  GRÁFICO DE BARRAS CSS:
+  - .chart-container: background surface, border-radius, padding
+  - .chart-bars: display flex, align-items flex-end, gap 0.5rem, height 150px
+  - .bar: flex 1, background gradiente primario/secundario, border-radius 4px 4px 0 0
+  - .bar-label: texto debajo de cada barra, font-size 0.7rem, color muted
+
+  TABLAS:
+  - .table-wrapper: overflow-x auto, border-radius var(--radius), border var(--color-border)
+  - table: width 100%, border-collapse collapse
+  - thead th: background var(--color-surface), padding 0.75rem 1rem, text-align left,
+               color var(--color-muted), font-size 0.8rem, text-transform uppercase
+  - tbody tr: border-bottom 1px solid var(--color-border), transition background 0.15s
+  - tbody tr:hover: background rgba(255,255,255,0.03)
+  - td: padding 0.85rem 1rem, font-size 0.9rem
+
+  BARRA DE BÚSQUEDA Y FILTROS:
+  - .table-controls: display flex, gap 1rem, margin-bottom 1rem, align-items center
+  - .search-input: input con ícono de lupa, estilo igual que login inputs
+  - .filter-select: select estilado igual que inputs
+
+  FORMULARIOS (nuevo-producto, nueva-venta):
+  - .form-card: max-width 700px, background surface, border-radius, padding 2rem
+  - .form-grid: display grid, 2 columnas, gap 1.5rem
+  - .form-group, label, input, select, textarea: igual que login pero adaptado
+  - .form-summary: sección de resumen (solo nueva-venta), background bg, border primario
+  - Mensajes de validación: .field-error en rojo bajo cada campo
+  - Toast de éxito: .toast-success, posición fixed bottom-right, animación slideIn
+
+  PAGINACIÓN:
+  - .pagination: display flex, gap 0.5rem, justify-content center, margin-top 1.5rem
+  - .page-btn: botón pequeño, borde, hover primario, .active con fondo primario
+
+  RESPONSIVE:
+  - @media (max-width: 768px):
+      · .app-layout: 1 columna, sidebar se convierte en barra superior o menú hamburguesa
+      · .metrics-grid: 2 columnas
+  ============================================================
+*/
