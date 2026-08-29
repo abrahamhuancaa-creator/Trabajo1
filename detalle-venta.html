@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle de Venta — StyleShop</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <style>
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-card-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--color-muted);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--color-border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .detail-card-title i { color: var(--color-amber); }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--color-border-light);
+      font-size: 0.84rem;
+    }
+
+    .detail-row:last-child { border-bottom: none; }
+
+    .detail-label {
+      color: var(--color-muted);
+      font-weight: 500;
+    }
+
+    .detail-value {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .order-header {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--color-amber);
+    }
+
+    .order-id {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .order-id span {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--color-muted);
+      display: block;
+      margin-top: 0.15rem;
+    }
+
+    .total-row {
+      background: var(--color-amber-light);
+      font-weight: 700 !important;
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem !important;
+      margin-top: 0.5rem;
+    }
+
+    .total-row .detail-value {
+      color: var(--color-amber-dark);
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <header class="topbar">
+    <div class="topbar-brand"><i class="bi bi-bag-fill"></i> StyleShop</div>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-actions">
+      <i class="bi bi-bell"></i>
+      <i class="bi bi-gear"></i>
+      <div class="topbar-avatar">AD</div>
+    </div>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a href="dashboard.html"><i class="bi bi-speedometer2"></i> Inicio</a>
+      <a href="productos.html"><i class="bi bi-box-seam"></i> Productos</a>
+      <a href="ventas.html" class="active"><i class="bi bi-receipt"></i> Ventas</a>
+      <a href="categorias.html"><i class="bi bi-tags"></i> Categorías</a>
+      <a href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+      <a href="login.html" class="subnav-end"><i class="bi bi-box-arrow-right"></i> Salir</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <!-- Encabezado de la página -->
+    <div class="page-header">
+      <h1><i class="bi bi-receipt"></i> Detalle de Venta</h1>
+      <div class="page-actions">
+        <a href="ventas.html" class="btn-secondary"><i class="bi bi-arrow-left"></i> Volver</a>
+        <button class="btn-primary" onclick="window.print()"><i class="bi bi-printer"></i> Imprimir</button>
+      </div>
+    </div>
+
+    <!-- Cabecera del pedido -->
+    <div class="order-header">
+      <div>
+        <div class="order-id">
+          Orden #VTA-0005
+          <span>Registrada el 25/08/2026 a las 10:42 am</span>
+        </div>
+      </div>
+      <span class="badge badge-info" style="font-size:0.85rem; padding: 0.4rem 1rem;">
+        <i class="bi bi-arrow-repeat"></i> En proceso
+      </span>
+    </div>
+
+    <div class="detail-grid">
+
+      <!-- Información del producto -->
+      <div class="detail-card">
+        <div class="detail-card-title"><i class="bi bi-box-seam"></i> Producto</div>
+        <div class="detail-row">
+          <span class="detail-label">SKU</span>
+          <span class="detail-value">PAN-002</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Nombre</span>
+          <span class="detail-value">Jean Slim Fit</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Categoría</span>
+          <span class="detail-value">Pantalones</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Color</span>
+          <span class="detail-value">Índigo</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Talla</span>
+          <span class="detail-value">32</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Precio unitario</span>
+          <span class="detail-value">$75.00</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Cantidad</span>
+          <span class="detail-value">2</span>
+        </div>
+        <div class="detail-row total-row">
+          <span class="detail-label">Total</span>
+          <span class="detail-value">$150.00</span>
+        </div>
+      </div>
+
+      <!-- Información del cliente -->
+      <div class="detail-card">
+        <div class="detail-card-title"><i class="bi bi-person"></i> Cliente</div>
+        <div class="detail-row">
+          <span class="detail-label">CI</span>
+          <span class="detail-value">12345682</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Nombre</span>
+          <span class="detail-value">Marco Condori</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Correo</span>
+          <span class="detail-value">marco@mail.com</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Teléfono</span>
+          <span class="detail-value">74567890</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Ciudad</span>
+          <span class="detail-value">Potosí</span>
+        </div>
+      </div>
+
+      <!-- Información del pago -->
+      <div class="detail-card">
+        <div class="detail-card-title"><i class="bi bi-credit-card"></i> Pago</div>
+        <div class="detail-row">
+          <span class="detail-label">Método</span>
+          <span class="detail-value">Transferencia</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Fecha de pago</span>
+          <span class="detail-value">25/08/2026</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Estado de pago</span>
+          <span class="detail-value">
+            <span class="badge badge-warning"><i class="bi bi-clock-fill"></i> Pendiente</span>
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">N° Referencia</span>
+          <span class="detail-value">TRF-2026-0089</span>
+        </div>
+      </div>
+
+      <!-- Notas -->
+      <div class="detail-card">
+        <div class="detail-card-title"><i class="bi bi-chat-left-text"></i> Notas</div>
+        <div class="detail-row">
+          <span class="detail-label">Observaciones</span>
+          <span class="detail-value">Entrega a domicilio solicitada</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Vendedor</span>
+          <span class="detail-value">Admin</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Sucursal</span>
+          <span class="detail-value">Principal - La Paz</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>© 2026 StyleShop · Sistema de Gestión</p>
+  </footer>
+
+</body>
+</html>
