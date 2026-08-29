@@ -261,6 +261,14 @@
 
 .btn-delete:hover { background: #ffcdd2; }
 
+.btn-view {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.btn-view:hover { background: #dcfce7; }
+
 .btn-cancel {
   display: inline-flex;
   align-items: center;
